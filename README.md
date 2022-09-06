@@ -8,4 +8,4 @@ my favorite things:
 - math
 - cats
 
-[http://marlborough.org](My school)
+[My school](http://marlborough.org)
