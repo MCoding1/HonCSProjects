@@ -1,6 +1,6 @@
 function setup()
 {
-  createCanvas(800, 800);
+  //createCanvas(800, 800);
   x = 0;
   y = 0;
   a=200;
@@ -13,7 +13,8 @@ function setup()
 
 function draw()
 {
-  const balls = ["balls"]
+  let fs = fullscreen();
+  fullscreen(!fs);
 background(0);
 x+=2;
 y+=2;
