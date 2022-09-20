@@ -1,7 +1,8 @@
 function setup()
 {
-  let fs = fullscreen();
-  fullscreen(!fs);
+  //let fs = fullscreen();
+  //fullscreen(!fs);
+  fullscreen();
   //createCanvas(800, 800);
   x = 0;
   y = 0;
