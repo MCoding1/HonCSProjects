@@ -13,18 +13,18 @@
 
 import processing.sound.*;
 
-SoundFile sample;
+SoundFile night;
 BeatDetector beatDetector;
 
 void setup() {
   size(400, 200);
   background(255);
 
-  sample = new SoundFile(this, "drums.wav");
-  sample.loop();
+  night = new SoundFile(this, "night.mp3");
+  night.loop();
   
   beatDetector = new BeatDetector(this);
-  beatDetector.input(sample);
+  beatDetector.input(night);
   
   // The sensitivity determines how long the detector will wait after detecting
   // a beat to detect the next one.
