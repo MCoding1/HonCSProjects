@@ -1,3 +1,6 @@
+//Art By: Melodie E.
+//Beat Detection Function: Sample Code
+
 /**
  * BeatDetection
  * by Alex Miller
