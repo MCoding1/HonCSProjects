@@ -1,4 +1,14 @@
 //when rocket detenates it makes a particle system, numbers at bottom are number of particle systems which also have life spans
+import processing.sound.*;
+
+SoundFile soundFile;
+AudioIn mic;
+FFT fft;
+int sampleCount = 100;
+int bandCount = 512;
+float[] spectrum = new float[bandCount];
+
+
 ArrayList<ParticleSystem> systems;
 ArrayList<Rocket> rockets;
 PVector gravity;
@@ -12,6 +22,12 @@ ParticleSystem ps;
 void setup() {
   fullScreen();
 
+  mic = new AudioIn(this, 0);
+  mic.start();
+  
+  fft = new FFT(this, bandCount);
+  fft.input(mic);
+
   fluid = new Fluid(0, 0, width, height, 0.01);
   gravity = new PVector(.03, .003);
   wind = new PVector(0, 0);
@@ -24,11 +40,38 @@ void setup() {
   smallLight.resize(8, 8);
   imageMode(CENTER);
 }
+//**********
 
+public float getTotalLevel(float[] data, int begin, int end){
+  if(begin >= end) return 0;
+  
+  float total = 0;
+  
+  for(int i=begin; i<end; i++)
+  total += data[i];
+  
+  return total;
+}
+
+boolean isSongBeat(){
+  fft.analyze(spectrum);
+  float low = getTotalLevel(spectrum, 50, 100); // greater than 1
+  println(low);
+  if(low>.06){
+    return true;
+  }else{
+    return false;
+  }
+}
+//*******
 void draw() {
+  
+  println(isSongBeat());
+  
   blendMode(ADD);
   background(0);
-  if (millis() % 10 == 0) {
+ // if (millis() % 10 == 0) {
+  if (isSongBeat()==true) {    
     PVector launchPoint = new PVector(width/2, height);
     PVector mouse = new PVector(random(width), random(height/2));
     PVector dir = PVector.sub(mouse, launchPoint);
@@ -56,7 +99,7 @@ void draw() {
       systems.remove(i);
     }
   }
-  println(rockets.size());
+ // println(rockets.size());
   //fluid.display();
   //solid.display();
 }
