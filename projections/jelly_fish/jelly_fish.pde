@@ -53,14 +53,16 @@ public float getTotalLevel(float[] data, int begin, int end){
   return total;
 }
 
-boolean isSongBeat(){
+String isSongBeat(){
   fft.analyze(spectrum);
   float low = getTotalLevel(spectrum, 50, 100); // greater than 1
   println(low);
-  if(low>.06){
-    return true;
+  if(low>.04 && low<.5){
+    return "Medium";
+  }else if(low>=.5){
+    return "High";
   }else{
-    return false;
+    return "Low";
   }
 }
 //*******
@@ -71,7 +73,7 @@ void draw() {
   blendMode(ADD);
   background(0);
  // if (millis() % 10 == 0) {
-  if (isSongBeat()==true) {    
+  if (isSongBeat()=="Medium") {    
     PVector launchPoint = new PVector(width/2, height);
     PVector mouse = new PVector(random(width), random(height/2));
     PVector dir = PVector.sub(mouse, launchPoint);
@@ -79,6 +81,14 @@ void draw() {
     dir.mult(random(5, 10));
     Rocket rock = new Rocket(launchPoint, dir);
     rockets.add(rock);
+  } else if(isSongBeat()=="High"){
+    PVector launchPoint = new PVector(width/4, height);
+    PVector mouse = new PVector(random(width), random(height/2));
+    PVector dir = PVector.sub(mouse, launchPoint);
+    dir.normalize();
+    dir.mult(random(0, 100));
+    Rocket rock = new Rocket(launchPoint, dir);
+    rockets.add(rock);    
   }
   for (int i = rockets.size()-1; i >-1; i--) {
     Rocket r = rockets.get(i); 
