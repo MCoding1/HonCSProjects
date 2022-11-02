@@ -57,9 +57,9 @@ String isSongBeat(){
   fft.analyze(spectrum);
   float low = getTotalLevel(spectrum, 50, 100); // greater than 1
   println(low);
-  if(low>.04 && low<.5){
+  if(low>.06 && low<.1){
     return "Medium";
-  }else if(low>=.5){
+  }else if(low>=.1){
     return "High";
   }else{
     return "Low";
