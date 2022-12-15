@@ -1,6 +1,6 @@
 h2 {
 /*  color: red; */
-  color: #ff0000;
+  color: pink;
   font-size: 2em;
 }
 
@@ -8,7 +8,11 @@ p{
   background-color: #a00; /* being doubled so aa0000 is printinted */
 }
 
-p.special{
+/* p.special{
   font-size: 1.2em:
   color: #00f;
+} */
+
+body {
+  background-color: lightgreen;
 }
