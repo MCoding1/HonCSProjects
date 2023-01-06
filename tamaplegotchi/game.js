@@ -18,6 +18,8 @@
 function setup() {
   createCanvas(500, 500);
   background(255);
+  x = 50;
+  y = 50;
 }
 function mousePressed() {
   if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
@@ -40,6 +42,11 @@ function draw() {
   image(img, 0, 0, 500, 500);
   //image(img2, 160, 200, 180, 180);
   image(img3, 200, 250, 100, 100);
+
+  ellipse(x,y,50,50);
+  x++;
+  y--:
+//  if(dist())
 }
 
 
