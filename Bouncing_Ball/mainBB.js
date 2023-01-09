@@ -28,6 +28,7 @@ function Ball(x, y) {
 	this.y = y;
 	this.vx = Math.floor(Math.random() * 10);
 	this.vy = Math.floor(Math.random() * 10);
+	this.sz = 50;
 
   this.update = function() {
   		this.x += this.vx;
@@ -37,7 +38,7 @@ function Ball(x, y) {
   this.display = function() {
   		fill(Math.floor(Math.random() * 256),Math.floor(Math.random() * 256),Math.floor(Math.random() * 256));
   		stroke(0);
-      ellipse(this.x, this.y, 50, 50);
+      ellipse(this.x, this.y, this.sz, this.sz);
   	};
 
   //fill(Math.floor(Math.random() * 256),Math.floor(Math.random() * 256),Math.floor(Math.random() * 256));
