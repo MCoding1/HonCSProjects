@@ -1,3 +1,5 @@
+var balls = [];
+
 function setup()
 {
   createCanvas(400, 400);
@@ -21,6 +23,10 @@ function draw()
     balls[i].display();
     balls[i].bounce();
   }
+}
+
+function mousePressed() {
+  balls.push( new Ball(mouseX, mouseY) );
 }
 
 function Ball(x, y) {
