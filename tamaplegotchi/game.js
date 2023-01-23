@@ -17,7 +17,7 @@
 
 function setup() {
   createCanvas(500, 500);
-  background(255);
+  background(250, 203, 152);
 //  x = 50;
 //  y = 50;
 }
