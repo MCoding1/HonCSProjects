@@ -4,7 +4,7 @@ function setup()
 {
   createCanvas(400, 400);
   for (var i = 0; i < 10; i++) {
-  balls[i] = new Ball(Math.random() * 401), Math.random() * 401));
+  balls[i] = new Ball(Math.random() * 401, Math.random() * 401);
 }
   //x = (Math.floor(Math.random() * 801));
   //y = (Math.floor(Math.random() * 801));
