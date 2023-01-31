@@ -15,6 +15,8 @@
 
 //}
 
+//!!!!!!UOI@IU#$UOI#O# use assignment 9 from processing semester 1 for game states
+
 function setup() {
   createCanvas(500, 500);
   background(250, 203, 152);
@@ -44,13 +46,18 @@ function draw() {
   // Width and height are the img's original width and height
   image(img, 0, 0, 500, 500);
   //image(img2, 160, 200, 180, 180);
-  image(img4, 200, 250, 100, 100);
+  image(img4, 200, 250, 200, 200);
 
 //  ellipse(x,y,50,50);
 //  x++;
 //  y--:
 //  if(dist())
 }
+
+// initially hide the divs using css or js
+
+//Use this for game states? https://stackoverflow.com/questions/15469545/how-do-you-program-game-states-in-javascript
+
 
 
 //How to put temporary web server
