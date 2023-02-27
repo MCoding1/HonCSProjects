@@ -55,11 +55,11 @@ function mousePressed() {
   if (mouseX > 400 && mouseX < 454 && mouseY > 8 && mouseY < 40) {
    save(cnv, 'myCanvas.jpg');
    //console.log(result);
-   photo = true;
+  // photo = true;
 
-   function start() {
-  startTime = new Date();
-  };
+  // function start() {
+//  startTime = new Date();
+  //};
   }
 }
 
@@ -104,23 +104,23 @@ function draw() {
 //  image(img7, 398, 8, 60, 40); //camera
 
 //fix time things cause its messing up popup!!!
-    if (photo = true){
-    image(img8, 398, 8, 60, 40); // flash camera
+  //  if (photo = true){
+  //  image(img8, 398, 8, 60, 40); // flash camera
     // get seconds
-    var seconds = Math.round(timeDiff);
-    console.log(seconds + " seconds");
-      if((seconds = Math.round(timeDiff))>=500){
-        let photo = false;
-          function end() {
-            endTime = new Date();
-            var timeDiff = endTime - startTime; //in ms
+  //  var seconds = Math.round(timeDiff);
+  //  console.log(seconds + " seconds");
+  //    if((seconds = Math.round(timeDiff))>=500){
+    //      function end() {
+      //      endTime = new Date();
+        //    var timeDiff = endTime - startTime; //in ms
             // strip the ms
-            timeDiff /= 1000;
-            }
-      }
-  }else{
-    image(img7, 398, 8, 60, 40); //camera
-  }
+        //    timeDiff /= 1000;
+          //  }
+
+  //    }
+  //}else{
+  //  image(img7, 398, 8, 60, 40); //camera
+  //}
 
 //  ellipse(x,y,50,50);
 //  x++;
