@@ -171,8 +171,27 @@ function draw() {
 //  y--:
 //  if(dist())
 
+//game screens
 
+//action screen
+if (action){
+  image(img13, 172, 205, 150, 147); //action
 
+  image(img5, 230, 298, 80, 55); // cat
+}
+
+//home Fullscreen
+if (home){
+  image(img6, 172, 205, 150, 147); //home
+
+  image(img5, 235, 300, 60, 40); // cat
+}
+//shop Fullscreen
+if (shop){
+  image(img12,172, 205, 150, 147); //shop
+
+  image(img5, 170, 300, 80, 55); // cat
+}
 
 //////***/////////***/////////***/////////***/////////***/////////***/////////***///
 
@@ -217,26 +236,6 @@ function draw() {
 
 
   //////***/////////***/////////***/////////***/////////***/////////***/////////***///
-
-//action screen
-if (action){
-  image(img13, 172, 205, 150, 147); //action
-
-  image(img5, 230, 298, 80, 55); // cat
-}
-
-//home Fullscreen
-if (home){
-  image(img6, 172, 205, 150, 147); //home
-
-  image(img5, 230, 287, 80, 55); // cat
-}
-//shop Fullscreen
-if (shop){
-  image(img12,172, 205, 150, 147); //shop
-
-  image(img5, 170, 300, 80, 55); // cat
-}
 
 //oxff RGB (#color does not work in java or javascript)
 fill(255, 239, 85);
