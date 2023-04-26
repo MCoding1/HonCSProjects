@@ -1,3 +1,9 @@
+//taMAPLEgotchi Simulator by: Melodie
+
+
+//game walkthrough, a key feature I liked (variable methods/local server), future steps(email/progress server, evolution)
+
+
 //have camera and popup drawing first in an outside function, then go into game states for the screen
 //click screen to start game, click screen to restart game, left button goes to settings and moves through options, middle button selects option, right button goes back
 // or we can do left button settings, arrow keys to go through options, middle button to select and right button to go home?
