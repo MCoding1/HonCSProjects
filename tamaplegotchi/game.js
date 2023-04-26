@@ -62,6 +62,12 @@ let img5;
 let img6;
 let img7;
 let img8;
+let img9;
+let img10;
+let img11;
+let img12;
+let img13;
+let img14;
 function preload() {
   img = loadImage('data/shell.png');
   img2 = loadImage('data/cat.png');
@@ -76,6 +82,25 @@ function preload() {
   img11 = loadImage('data/right.png');
   img12 = loadImage('data/shop.png');
   img13 = loadImage('data/action.png');
+  img14 = loadImage('data/plant2.png');//purple plant
+  img15 = loadImage('data/plant1.png');//white plant
+  img16 = loadImage('data/bear.png');//teddy bear
+  img17 = loadImage('data/pet.png');//black cat pet
+  img18 = loadImage('data/light.png');//chandelier light
+ img19 = loadImage('data/mouse.png');//pet mouse
+  img20 = loadImage('data/cake.png');//cake
+  img21 = loadImage('data/coin.png');//coin
+  img22 = loadImage('data/trunk.png');//under the hood car
+    img23 = loadImage('data/low.png');//red low bar
+ img24 = loadImage('data/medium.png');//yellow medium bar
+ img25 = loadImage('data/high.png');//high light green bar
+ img26 = loadImage('data/superhigh.png');//dark green full bar
+  img27 = loadImage('data/coinscore.png');//yellow box to track coin score
+  img28 = loadImage('data/food.png');//fish to go next to food bar
+  img29 = loadImage('data/play.png');//yarn to go next to play bar
+  img30 = loadImage('data/bath.png');//bathtub to go next to bath clean bar
+  img31 = loadImage('data/bought.png');//bought sign
+ img32 = loadImage('data/buy.png');//buy sign
 }
 
 function mousePressed() {
@@ -191,6 +216,19 @@ if (shop){
   image(img12,172, 205, 150, 147); //shop
 
   image(img5, 170, 300, 80, 55); // cat
+
+  //shop elements
+  image(img14, 218, 230, 48, 48); //purple plant
+
+  /*
+  img14 = loadImage('data/plant2.png');//purple plant
+  img15 = loadImage('data/plant1.png');//white plant
+  img16 = loadImage('data/bear.png');//teddy bear
+  img17 = loadImage('data/pet.png');//black cat pet
+  img18 = loadImage('data/light.png');//chandelier light
+  img19 = loadImage('data/mouse.png');//pet mouse
+  img20 = loadImage('data/cake.png');//cake
+  */
 }
 
 //////***/////////***/////////***/////////***/////////***/////////***/////////***///
