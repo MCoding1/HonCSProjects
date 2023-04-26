@@ -34,6 +34,8 @@
 //currency called Gotchi Points while playing games, and can use the currency in an in-game
 //shop to buy different foods, toys, accessories, or even room decorations for the pet
 
+let score = 0;
+
 let on = false;
 
 let action = false;
@@ -101,6 +103,11 @@ function preload() {
   img30 = loadImage('data/bath.png');//bathtub to go next to bath clean bar
   img31 = loadImage('data/bought.png');//bought sign
  img32 = loadImage('data/buy.png');//buy sign
+ img33 = loadImage('data/doll.png');//red doll in shop
+ img34 = loadImage('data/end.png');//ending background with bus stop
+ img35 = loadImage('data/endcat.png');//ending cat with backpack
+ img36 = loadImage('data/bus.png');//ending bus with school name
+ img37 = loadImage('data/theend.png'); //pixel font says The End for finale
 }
 
 function mousePressed() {
@@ -215,19 +222,40 @@ if (home){
 if (shop){
   image(img12,172, 205, 150, 147); //shop
 
-  image(img5, 170, 300, 80, 55); // cat
+  image(img5, 180, 300, 80, 55); // cat
 
   //shop elements
-  image(img14, 218, 230, 48, 48); //purple plant
+  image(img16, 245, 250, 35, 35); //teddy
+  image(img32, 250, 275, 40, 40);//shop sign for teddy
 
+  image(img14, 218, 230, 48, 48); //purple plant
+  image(img32, 230, 275, 40, 40);//shop sign for purple plant
+
+  image(img15, 285, 238, 40, 40); //white plant
+  image(img32, 294, 275, 40, 40);//shop sign for white plant
+
+  image(img18, 252, 207, 50, 50);//chandelier
+  image(img32, 265, 205, 40, 40);//shop sign for chandelier
+
+  image(img33, 172, 205, 150, 147); //red doll in shop
+  image(img32, 272, 275, 40, 40);//shop sign for white plant
+
+  image(img20, 292, 285, 30, 30); //cake
+  image(img32, 288, 300, 40, 40);//shop sign for cake
+
+  image(img19, 288, 325, 30, 20); //pet mouse
+  image(img32, 295, 340, 40, 40);//shop sign for pet mouse
+
+  image(img17, 258, 325, 30, 30); //black cat pet
+  image(img32, 265, 340, 40, 40);//shop sign for pet cat
   /*
-  img14 = loadImage('data/plant2.png');//purple plant
-  img15 = loadImage('data/plant1.png');//white plant
+
   img16 = loadImage('data/bear.png');//teddy bear
   img17 = loadImage('data/pet.png');//black cat pet
-  img18 = loadImage('data/light.png');//chandelier light
+
   img19 = loadImage('data/mouse.png');//pet mouse
   img20 = loadImage('data/cake.png');//cake
+  img33 = loadImage('data/doll.png');//red doll in shop
   */
 }
 
