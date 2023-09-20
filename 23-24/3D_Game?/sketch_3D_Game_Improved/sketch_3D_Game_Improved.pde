@@ -1,8 +1,10 @@
-PShape s; int p; String sub; Float X,Y,Z;
+PShape s, s1; int p; String sub; Float X,Y,Z;
 float rotX, rotY, camX, camY, camZ;
 
 void setup(){
-  size(600,400,P3D);
+  size(1000,1000,P3D);
+  s = loadShape("girl.obj");
+  s1 = loadShape("grass.obj");
 }
 
 void drawAxes(float size){
@@ -47,14 +49,42 @@ rotateY(map(mouseX,0,width,-PI,PI));
  //do a translate so orogion setup so things start at corner and go out, not center at orign
   
   //grass
- fill(#2E8939);
- box(100,100,10);
 
-   drawAxes(100000); 
-   
+ fill(#2E8939);
+ box(400,400,20);
+    translate(-200,-200,0); 
+    
+    
+    
+ pushMatrix();
+ float angleX = radians(90);  // Rotate 90 degrees around the X-axis to make it perpendicular
+float angleY = 0;            // No rotation around the Y-axis
+float angleZ = 0;            // No rotation around the Z-axis
+
+rotateX(angleX);
+rotateY(angleY);
+rotateZ(angleZ);
+
+    //shape(s, 100, 100, 50, 50);  
+    //shape,x,y,width,height
+    
+    //do translation
+    
+   translate(0,0,-200); 
+    
+    
+shape(s, 200, 10, 100, 100); // Reduced Z-coordinate to 50
+//all object files here?
+
+shape(s1, 200, 10, 100, 100);
+popMatrix();
+
+  drawAxes(100000);
+      
 pushMatrix();
 float textSize = 40; // Adjust the text size as needed
 textSize(textSize); // Set the text size
-text("foo!", -20, 0, 20);
+text("Welcome to the random forest!", 0, -20, 0);
 popMatrix();
+
 }
