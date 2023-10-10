@@ -5,6 +5,8 @@ void setup(){
   size(1000,1000,P3D);
   s = loadShape("girl.obj");
   s1 = loadShape("grass.obj");
+  //s2 = loadShape("tree.obj");
+  //s3 = loadShape("flower.obj");  
 }
 
 void drawAxes(float size){
@@ -76,7 +78,8 @@ rotateZ(angleZ);
 shape(s, 200, 10, 100, 100); // Reduced Z-coordinate to 50
 //all object files here?
 
-shape(s1, 200, 10, 100, 100);
+    translate(200,10,0); 
+shape(s1, 0, 20, 300, 20);
 popMatrix();
 
   drawAxes(100000);
