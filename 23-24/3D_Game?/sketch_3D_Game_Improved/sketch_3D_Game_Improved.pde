@@ -1,6 +1,8 @@
 PShape s, s1; int p; String sub; Float X,Y,Z;
 float rotX, rotY, camX, camY, camZ;
 
+//peasycam try
+
 void setup(){
   size(1000,1000,P3D);
   s = loadShape("girl.obj");
