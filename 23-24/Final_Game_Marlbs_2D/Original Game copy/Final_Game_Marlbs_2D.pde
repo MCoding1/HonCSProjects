@@ -58,7 +58,7 @@ boolean mute = false;
 
 int currentScene;
 ArrayList<Scene> scenes;
-//S1 s1 = new S1();
+//S1 s1 = new S1();   
 int s1 = 1;
 int task = 0;
 int x, y, vx, vy;
@@ -478,7 +478,7 @@ void drawGame() {
   //don't have a phone, in a random place, dont know the language, have 10,000
   //must use your wits, must make friends, must conserve resources, must make it 15 days
   //(half way across the world) get paid tuition for marlborough and college and life
-  image(darklord, width/8+100, 3*height/4);
+  image(darklord, width/8+100, 3*height/4-50);
   if (s1 == 1) {
     fill(#9BB4FF);
     // noStroke();
@@ -520,10 +520,37 @@ void drawGame() {
     rect(0, 700, width, 400);
     fill(#1E1921);
     //have jeff here, and talk with jeff instead of the dark lord
-    text("...He's never been so friendly before! Wonderful, you'll get along swell", width/2, height/2+280);
+    text("...He's never been so friendly before! Wonderful, it SEEms you'll get along swell", width/2, height/2+280);
 
+  }else if (s1 == 8) {
+    fill(#9BB4FF);
+    // noStroke();
+    rect(0, 700, width, 400);
+    fill(#1E1921);
+    //have jeff here, and talk with jeff instead of the dark lord
+    text("OH! You only have 20 hours left, quickly try to get Jeff to help you with your quest!", width/2, height/2+280);
 
+  }else if (s1==9) {
+    rect(0, 700, width, 400);
+    fill(#FF4359);
+    text("Task #4: Ask for Jeff's Help (aka Convince Jeff to give you money)", width/2, height/2+280);
+    task = 4;
+  }else if (s1 == 10) {
+    fill(#9BB4FF);
+    // noStroke();
+    rect(0, 700, width, 400);
+    fill(#1E1921);
+    //have jeff here, and talk with jeff instead of the dark lord
+    text("Wow I...can't beleive you just speedran my simulation, who knew Jeff was so fond of you. Alright I guess you're off to the finish line...(HEH she has no idea what I have in store for her)", width/2, height/2+280);
+
+//talk to jeff to make friends and get money with task, 
+  
+  //get there airport, baracade, bribe cat to get you in through sewer, moral of story is friendship 
+  //getsv you through hard timesw and have a little fun in your life
+  //an ode to my lowerclassmen, you got this
   }
+  
+  
   
   fill(255);
   rect(width-150, height-100, 130, 30);
@@ -564,7 +591,7 @@ void drawTask() {
     }
   }else if (task==3){    
      image(Jeff, width/8+100, height/2);
-  
+      image(girl, (x), (y));
 
     fill(#FFC1F7);
     // noStroke();
@@ -577,8 +604,64 @@ void drawTask() {
   rect(width-150, height-100, 130, 30);
   fill(0);
   textSize(20);
-  text("Click to continue", width-90, height-80);
+  text("Hover over Jeff's Eye", width-90, height-80);
+
+      if (x<=350 && x>=300 && y<=390 && y>=350) {
+      println("Task is 3, setting s1 to 7");
+      task = 0;
+      gameState="GAME";
+      s1=7;
+    }
+  }else if (task==4){    
+     image(Jeff, width/8+100, height/2);
+      image(girl, (x), (y));
+            image(girl, width/8+100, 3*height/4-50);
+      
+
+    fill(#DDAFFF);
+    // noStroke();
+    rect(0, 700, width, 400);
+    fill(0);
+    //have jeff here, and talk with jeff instead of the dark lord
+    text("Soooo...Jeff. Can you give me *cough* I mean loan me 300$ to get to LA for my mission?", width/2, height/2+280);
+  
+    fill(255);
+  rect(width-150, height-100, 130, 30);
+  fill(0);
+  textSize(20);
+  text("Hover over Jeff's Other Eye", width-90, height-80);
+
+      if (x<=250 && x>=200 && y<=390 && y>=350) {
+      println("Task is 4, setting task to 5");
+   
+    }
+
+  }else if (task==5){    
+       image(Jeff, width/8+100, height/2);
+      image(girl, (x), (y));
+
+    fill(#FFC1F7);
+    // noStroke();
+    rect(0, 700, width, 400);
+    fill(0);
+    //have jeff here, and talk with jeff instead of the dark lord
+    text("JEFF WILL PROVIDE. SUCCEED! I BELIEVE IN YOU!", width/2, height/2+280);
+  
+    fill(255);
+  rect(width-150, height-100, 130, 30);
+  fill(0);
+  textSize(20);
+  text("Hover over Jeff's other other Eye", width-90, height-80);
+
+      if (x<=350 && x>=300 && y<=390 && y>=350) {
+      println("Task is 5, setting s1 to 10");
+   task = 0;
+      gameState="GAME";
+      s1=10;
+    }
   }
+  
+  
 }
 
 void drawEnd() {
@@ -631,11 +714,7 @@ void mousePressed() {
       }
     }
     
-    if(task==3){
-    s1=7;
- println("Task is 3, setting s1 to 7");
-    gameState = "GAME";
-    }
+
 
     if (task > 0) {
       gameState = "TASK";
