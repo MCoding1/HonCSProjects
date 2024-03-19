@@ -614,8 +614,9 @@ void drawTask() {
     }
   }else if (task==4){    
      image(Jeff, width/8+100, height/2);
+              
       image(girl, (x), (y));
-            image(girl, width/8+100, 3*height/4-50);
+
       
 
     fill(#DDAFFF);
